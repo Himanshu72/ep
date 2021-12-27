@@ -20,7 +20,7 @@ export class UserModule {
     consumer
     .apply(AuthMiddleware)
     .exclude(
-    { path: 'user/login', method: RequestMethod.GET },
+    { path: 'user/login', method: RequestMethod.POST },
     { path: 'user', method: RequestMethod.POST }
   )
   .forRoutes(UserController);
