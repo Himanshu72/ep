@@ -21,7 +21,7 @@ export class UserController {
          return this.userService.createAccount(account,username);
     }
 
-    @Get('/login')
+    @POST('/login')
     auth(@Body() login:userLoginDTO) {
         return this.userService.auth(login);
     }
