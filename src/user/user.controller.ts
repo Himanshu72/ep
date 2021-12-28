@@ -25,5 +25,10 @@ export class UserController {
     auth(@Body() login:userLoginDTO) {
         return this.userService.auth(login);
     }
+    @Get('/referral/:username')
+    async getReferral(@Param('username') username) {
+        console.log(username);
+      return this.userService.getReffral(username);
+    }
 
 }

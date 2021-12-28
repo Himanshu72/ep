@@ -64,4 +64,7 @@ async auth(userLoginDTO:userLoginDTO):Promise<toeknUser>{
             throw new HttpException("Unauthorized",400);
         }
     }
+    async getReffral(username){
+        return this.referralModel.findOne({_id:username})
+    }
 }
